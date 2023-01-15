@@ -4,6 +4,7 @@ import user from '../data/user.json';
 import data from '../data/data.json';
 import friends from '../data/friends.json';
 import { FriendsList } from './FriendList';
+import { StatisticList } from './StatisticList';
 export const App = () => {
   return (
     <div
@@ -22,8 +23,9 @@ export const App = () => {
     avatar={user.avatar}
     stats={user.stats}
   />
-  <Statistic  title="Upload stats" stats={data} 
-typestat={data} />
+  <StatisticList/>
+  {data.map(data=>(<Statistic stats={data} 
+typestat={data} />))}
 <FriendsList friends={friends}/>
     </div>
   );
