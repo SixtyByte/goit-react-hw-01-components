@@ -1,10 +1,12 @@
 import Profile from './Profile'
-import Statistic from './Statistics';
 import user from '../data/user.json';
 import data from '../data/data.json';
 import friends from '../data/friends.json';
 import { FriendsList } from './FriendList';
-import { StatisticList } from './StatisticList';
+import { Statistic } from './Statistics';
+import { TransactionHistory } from './TransactionHistory';
+import transactions from '../data/transactions.json'
+
 export const App = () => {
   return (
     <div
@@ -23,10 +25,9 @@ export const App = () => {
     avatar={user.avatar}
     stats={user.stats}
   />
-  <StatisticList/>
-  {data.map(data=>(<Statistic stats={data} 
-typestat={data} />))}
+<Statistic title="Upload stats" stats={data}/>
 <FriendsList friends={friends}/>
+<TransactionHistory items={transactions}/>
     </div>
   );
 };

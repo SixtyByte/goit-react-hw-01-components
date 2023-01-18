@@ -1,30 +1,31 @@
 import PropTypes from 'prop-types';
+import '../styles/Profile.css'
 function Profile(props) {
     
-    return(<div class="profile">
-    <div class="description">
+    return(<div className="profile">
+    <div className="description">
       <img
         src={props.avatar}
         alt="User avatar"
-        class="avatar"
+        className="avatar"
       />
-      <p class="name">{props.username}</p>
-      <p class="tag">{props.tag}</p>
-      <p class="location">{props.location}</p>
+      <p className="name">{props.username}</p>
+      <p className="tag">@{props.tag}</p>
+      <p className="location">{props.location}</p>
     </div>
   
-    <ul class="stats">
+    <ul className="stats">
       <li>
-        <span class="label">Followers</span>
-        <span class="quantity"> {props.stats.followers}</span>
+        <span className="label">Followers</span>
+        <span className="quantity"> {props.stats.followers}</span>
       </li>
       <li>
-        <span class="label">Views</span>
-        <span class="quantity"> {props.stats.views}</span>
+        <span className="label">Views</span>
+        <span className="quantity"> {props.stats.views}</span>
       </li>
       <li>
-        <span class="label">Likes</span>
-        <span class="quantity"> {props.stats.likes}</span>
+        <span className="label">Likes</span>
+        <span className="quantity"> {props.stats.likes}</span>
       </li>
     </ul>
   </div>)
@@ -36,5 +37,5 @@ Profile.propTypes={
   tag:PropTypes.string,
   location:PropTypes.string,
   avatar:PropTypes.string,
-  stats:PropTypes.number
+  
 }

@@ -1,16 +1,22 @@
 import PropTypes from 'prop-types';
-function Statistic(props) {
+
+export const Statistic=({tittle,stats})=>  {
+  
     
     return(
-      <li class="item">
-        <span class="label">{props.stats.label}</span>
-        <span class="percentage"> {props.stats.percentage}%</span>
-      </li>
+      <div>
+        {tittle &&<h2 className='title'>{tittle}</h2>}
+      <ul>
+      {stats.map(({id,label,percentage})=>(
+      <li key={id} className="item">
+        <span className="label">{label}</span>
+        <span className="percentage"> {percentage} %</span>
+      </li>))}</ul>
+      </div>
 )}
-export default Statistic;
 
 Statistic.propTypes={
- stats:PropTypes.number,
- typestat:PropTypes.string
+ stats:PropTypes.number && PropTypes.array,
+ typestat:PropTypes.array
 
 }
