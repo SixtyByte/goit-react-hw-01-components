@@ -1,4 +1,4 @@
-import './FriendItem.css'
+import '../styles/Friend.css'
 import PropTypes from 'prop-types';
  export const Friend=({friend:{avatar,name,isOnline},})=>{ return <li className="item">
 <span className= {isOnline && "Online"}></span>
