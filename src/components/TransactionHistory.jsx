@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import  '../styles/TransactionHistory.css' 
 export const TransactionHistory=({items})=>  {
   
     
@@ -9,7 +9,7 @@ export const TransactionHistory=({items})=>  {
   <thead>
     <tr>
       <th>Type</th>
-      <th>Amount</th>
+      <th className='amount'>Amount</th>
       <th>Currency</th>
     </tr>
   </thead>
