@@ -1,0 +1,10 @@
+.avatar{background-color: white; border-color:gray; border-bottom: solid; border-radius: 30px;}
+.stats{border-top: solid;}
+.label{color: coral; border-radius: 30px; text-align: center; }
+.description{ }
+ul{list-style-type: none;}
+.profile{border-style: solid; border-radius: 30px; display:block;width: 516px; margin-left: 20px;margin-top: 20px;}
+.tag{color: silver; font-family:'Courier New', Courier, monospace; text-align: center;}
+.name{font-weight: bold; text-align: center;}
+.location{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; text-align: center;}
+.quantity{text-align: center;}
